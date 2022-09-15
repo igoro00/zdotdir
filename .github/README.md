@@ -2,17 +2,6 @@
 
 My `$ZDOTDIR` [dotfiles] directory, which contains my zsh configuration.
 
-## My setup
-
-Plugin manager:
-- [antidote](https://github.com/mattmc3/antidote)
-
-Framework:
-- [zephyr](https://github.com/mattmc3/zephyr)
-
-Plugins:
-- See my [.zplugins.txt](https://github.com/igoro00/zdotdir/blob/main/.zplugins.txt) file
-
 ## Installation
 
 Install this dotfiles repo to your `$ZDOTDIR`:
@@ -33,6 +22,15 @@ EOF
 # load zsh
 zsh
 ```
+
+## Configuration
+
+Aliases:
+- See [aliases.txt](https://github.com/igoro00/zdotdir/blob/main/conf.d/aliases.zsh)
+
+Plugins:
+- See [.zplugins.txt](https://github.com/igoro00/zdotdir/blob/main/.zplugins.txt)
+
 
 ## Look-and-feel
 
