@@ -1,6 +1,6 @@
 # prompts
-#sindresorhus/pure kind:fpath
-romkatv/powerlevel10k
+sindresorhus/pure kind:fpath
+
 
 # utility plugins
 romkatv/zsh-bench kind:path
@@ -19,6 +19,7 @@ mattmc3/zshrc.d
 mattmc3/zfunctions
 olets/zsh-window-title
 rupa/z
+Freed-Wu/zsh-command-not-found
 
 # deferred plugins
 olets/zsh-abbr kind:defer
