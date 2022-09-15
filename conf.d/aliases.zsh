@@ -33,10 +33,13 @@ alias d='dirs -v'
 alias l=ls
 
 # mask built-ins with better defaults
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
-alias mkdir='mkdir -p'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias rmdir='rmdir -v'
+alias chmod='chmod -v'
+alias chown='chown -v'
 alias ping='ping -c 5'
 alias type='type -a'
 alias vi=vim
@@ -92,41 +95,20 @@ alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
 alias zdot='cd $ZDOTDIR'
 alias cls="clear && printf '\e[3J'"
 
-# echo things
-alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
-alias print-path='echo $PATH | tr ":" "\n"'
-alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
-
-# auto-orient images based on exif tags
-alias autorotate="jhead -autorot"
-
-# set initial working directory
-IWD=${IWD:-PWD}
-alias iwd='echo $IWD'
-alias cdiwd='cd "$IWD"'
-
 # dotfiles
 alias dotf='cd "$DOTFILES"'
 alias dotfed='cd "$DOTFILES" && ${VISUAL:-${EDITOR:-vim}} .'
-
-# java
-alias setjavahome="export JAVA_HOME=\`/usr/libexec/java_home\`"
 
 # python
 alias py2='python2'
 alias py3='python3'
 alias py='python3'
+alias pip2='python2 -m pip'
+alias pip3='python3 -m pip'
+alias pip='pip3'
 alias pip2update="pip2 list --outdated | cut -d ' ' -f1 | xargs -n1 pip2 install -U"
 alias pip3update="pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U"
 alias pyfind='find . -name "*.py"'
 alias pygrep='grep --include="*.py"'
 alias pyva="source .venv/bin/activate"
 
-# todo-txt
-alias t="todo.sh"
-alias todos="$VISUAL $HOME/Desktop/todo.txt"
-
-# vscode
-if [[ "$OSTYPE" == darwin* ]]; then
-  alias code="open -b com.microsoft.VSCode"
-fi
